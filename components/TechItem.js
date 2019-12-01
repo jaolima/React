@@ -1,0 +1,22 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+function TechItem({ tech, onDelete }) {
+    return (
+        <li>
+            {tech}
+            <button onClick={onDelete} type="button">Remover</button>
+        </li>
+    )
+}
+
+TechItem.defaultProps = {
+    tech: 'Não há nenhuma tecnologia'
+}
+
+TechItem.PropTypes = {
+ tech: PropTypes.string.isRequired, 
+ onDelete: PropTypes.func.isRequired, 
+}
+
+export default TechItem
